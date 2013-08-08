@@ -3,23 +3,28 @@
 
 BEGIN;
 
-SELECT plan(1);
+SELECT plan(16);
 
-INSERT INTO badges (employee, issued, status) VALUES (002, '2012-10-18', 'A');
+SELECT has_table('badges');
+SELECT has_pk('badges');
 
-PREPARE badges_invalid AS
-  SELECT status, issued 
-  FROM badges
-  WHERE employee = 2
-  ORDER BY issued;
+SELECT triggers_are('public', 'badges', ARRAY['badge_status']);
+SELECT trigger_is('public', 'badges', 'badge_status', 'public', 'invalidate_badge', 'Trigger invalidates all badges but current one');
 
-SELECT results_eq (
-  'badges_invalid',
-  $$VALUES('I'::character(1), '2012-10-17'::date),
-          ('A'::character(1), '2012-10-18'::date)$$,
-  'only latest badge should be active'
-);
+SELECT has_column('badges', 'badge');
+SELECT has_column('badges', 'employee');
+SELECT has_column('badges', 'issued');
+SELECT has_column('badges', 'status');
+
+SELECT col_not_null('badges', 'badge');
+SELECT col_not_null('badges', 'employee');
+SELECT col_not_null('badges', 'issued');
+SELECT col_not_null('badges', 'status');
+
+SELECT col_type_is('badges', 'badge', 'integer');
+SELECT col_type_is('badges', 'employee', 'integer');
+SELECT col_type_is('badges', 'issued', 'date');
+SELECT col_type_is('badges', 'status', 'character(1)');
 
 SELECT * FROM finish();
 ROLLBACK;
-
