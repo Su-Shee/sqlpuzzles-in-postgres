@@ -3,10 +3,14 @@
 
 BEGIN;
 
-SELECT plan(15);
+SELECT plan(17);
 
 SELECT has_table('hotel');
 SELECT has_pk('hotel');
+
+SELECT triggers_are('public', 'hotel', ARRAY['double_booking']); 
+SELECT trigger_is('public', 'hotel', 'double_booking', 'public', 'prevent_double_booking', 'Trigger prevents double booking a room'); 
+
 
 SELECT has_column('hotel', 'room');
 SELECT has_column('hotel', 'guest');
