@@ -1,5 +1,5 @@
 -- pg_prove -U postgres -d sqlpuzzles 01-securitybadges.sql --verbose
--- psql -U postgres -h 10.13.2.47 -d sqlpuzzles -Xf 01-charactersonly.sql
+-- psql -U postgres -d sqlpuzzles -Xf 01-charactersonly.sql
 
 BEGIN;
 

@@ -1,5 +1,5 @@
 -- pg_prove -U postgres -d sqlpuzzles 02-charactersonly.sql --verbose
--- psql -U postgres -h 10.13.2.47 -d sqlpuzzles -Xf 02-charactersonly.sql
+-- psql -U postgres -d sqlpuzzles -Xf 02-charactersonly.sql
 
 BEGIN;
 

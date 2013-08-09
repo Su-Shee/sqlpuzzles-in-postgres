@@ -1,6 +1,5 @@
 -- pg_prove -U postgres -d sqlpuzzles 01-overlapping.sql --verbose
--- pg_prove -U postgres -d sqlpuzzles 01-overlaps.sql --verbose
--- psql -U postgres -h 10.13.2.47 -d sqlpuzzles -Xf 01-overlaps.sql
+-- psql -U postgres -d sqlpuzzles -Xf 01-overlaps.sql
 
 BEGIN;
 

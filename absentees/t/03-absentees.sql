@@ -1,5 +1,5 @@
 -- pg_prove -U postgres -d sqlpuzzles 03-absentees-tables.sql --verbose
--- psql -U postgres -h 10.13.2.47 -d sqlpuzzles -Xf 03-absentees-tables.sql
+-- psql -U postgres -d sqlpuzzles -Xf 03-absentees-tables.sql
 
 -- isn't able to see weekends in between when calculating sick days
 -- public holidays cannot be sickdays - helper table?
