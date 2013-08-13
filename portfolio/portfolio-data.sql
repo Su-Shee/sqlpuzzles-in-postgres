@@ -1,0 +1,22 @@
+INSERT INTO portfolios (id, stuff) VALUES (1, 'Hund');
+INSERT INTO portfolios (id, stuff) VALUES (2, 'Katze');
+INSERT INTO portfolios (id, stuff) VALUES (3, 'Maus');
+INSERT INTO portfolios (id, stuff) VALUES (4, 'dog');
+INSERT INTO portfolios (id, stuff) VALUES (5, 'cat');
+INSERT INTO portfolios (id, stuff) VALUES (6, 'mouse');
+INSERT INTO portfolios (id, stuff) VALUES (7, 'Banane');
+INSERT INTO portfolios (id, stuff) VALUES (8, 'Zitrone');
+INSERT INTO portfolios (id, stuff) VALUES (9, 'banana');
+INSERT INTO portfolios (id, stuff) VALUES (10,'lemon');
+INSERT INTO portfolios (id, stuff) VALUES (11,'whatever');
+
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (1, 0, 1, '2012-10-17');
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (1, 1, 2, '2012-10-18');
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (1, 2, 3, '2012-10-19');
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (1, 3, 4, '2012-11-02');
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (1, 4, 10, '2012-11-04');
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (2, 0, 6, '2012-10-17');
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (2, 1, 7, '2012-10-18');
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (2, 2, 8, '2012-10-19');
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (2, 3, 9, '2012-11-02');
+INSERT INTO succession (chain, next, portfolio_id, date) VALUES (2, 4, 10,'2012-11-04');
